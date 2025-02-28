@@ -6,7 +6,9 @@
 // conusmer / useContext( you )
 import React, { useContext, useEffect, useState } from "react";
 
-const API_URL = `http://www.omdbapi.com/?apikey=38b0f358&s=titanic`;
+const API_KEY = import.meta.env.VITE_API_KEY;
+console.log(API_KEY)
+const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&s=titanic`;
 
 const AppContext = React.createContext();
 
