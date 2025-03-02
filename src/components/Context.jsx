@@ -35,7 +35,7 @@ const AppProvider = ({ children }) => {
   };
   useEffect(() => {
     let timerOut  = setTimeout(() => {
-      getMovies(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`);
+      getMovies(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`);
     }, 700);
     return () => clearTimeout(timerOut);
   }, [query]);
